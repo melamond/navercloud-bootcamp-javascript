@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Document</title>
+        <script>
+            /*
+            script 내부에 작성한 js코드는
+            브라우저가 로딩되며 실행함
+            prompt('안내문');은 입력을 받을수 있는 구문
+            while문을 이용해 1~100사이의 범위 값을 하나 뽑고
+            up and down 형식으로 맞춰나가는 게임 만들기
+            */
+           let randomNumber = (Math.floor(Math.random() * 100)+1);
+           console.log(randomNumber);
+           var userInput = prompt('1~100 사이를 입력해주세요.');;
+           while(randomNumber != userInput){
+                if(userInput < randomNumber){
+                    console.log('Up');
+                }else{
+                    console.log('Down');
+                }
+                userInput = prompt('다시 입력해주세요.');
+           }
+           console.log('정답');
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
