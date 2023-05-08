@@ -1,0 +1,28 @@
+<script>
+
+    /*
+    prompt로 키와 몸무게 변수에 저장
+    변수에 저장된 키를 인수로 전달받아
+    bmi 지수를 계산하여 반환
+    bmi가 25이상이면 과체중입니다
+    18.5이하면 저체중입니다
+    나머지는 정상체중입니다 출력하는
+    calcBMI함수 정의 호출
+    계산식 : kg / m * m
+    */
+    function calcBMI(weight, height) {
+        var bmi = weight / (height / 100) ** 2 ;
+        console.log(bmi);
+        if(bmi >= 25.0){
+            console.log('당신은 과체중입니다');
+        }else if (bmi <= 18.5) {
+            console.log('당신은 저체중입니다');
+        }else{
+            console.log('당신은 정상체중입니다');
+        }
+    }
+
+    var weight = parseInt(prompt('몸무게 입력'));
+    var height = parseInt(prompt('키 입력'));
+    calcBMI(weight,height);
+</script>
